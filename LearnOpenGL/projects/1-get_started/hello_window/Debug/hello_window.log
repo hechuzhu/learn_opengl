@@ -1,14 +1,14 @@
-﻿Build started 2016/5/10 18:24:04.
-     1>Project "D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\hello_window.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 2016/5/10 19:49:14.
+     1>Project "D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\hello_window.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt hellowindow2.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt hellowindow2.cpp
          hellowindow2.cpp
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\hello_window.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3dll.lib glew32s.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opencv_ts300.lib opencv_ts300d.lib opencv_world300.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opencv_ts300.lib opencv_ts300d.lib opencv_world300.lib opencv_world300d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:MSVCRT.lib /NODEFAULTLIB:LIBCMT.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\hello_window.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 Debug\hellowindow2.obj
-     1>glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\vc100.pdb'; linking object as if no debug info
-         hello_window.vcxproj -> D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\hello_window.exe
-     1>Done Building Project "D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\hello_window.vcxproj" (Rebuild target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\hello_window.exe" /INCREMENTAL /NOLOGO opengl32.lib glfw3dll.lib glew32s.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:MSVCRT.lib /NODEFAULTLIB:LIBCMT.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\hello_window.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 Debug\hellowindow2.obj
+     1>glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\vc100.pdb'; linking object as if no debug info
+         hello_window.vcxproj -> D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\Debug\hello_window.exe
+     1>Done Building Project "D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_window\hello_window.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.02
+Time Elapsed 00:00:00.75
