@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\vc120.pdb
 d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\vc120.idb
 d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hellotriangle2.obj
@@ -10,3 +11,17 @@ d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\
 d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\link.command.1.tlog
 d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\link.read.1.tlog
 d:\work\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\link.write.1.tlog
+=======
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\vc120.pdb
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\vc120.idb
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hellotriangle2.obj
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.ilk
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.exe
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.pdb
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\cl.command.1.tlog
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\cl.read.1.tlog
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\cl.write.1.tlog
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\link.command.1.tlog
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\link.read.1.tlog
+d:\hechuzhu\learn_opengl\learnopengl\projects\1-get_started\hello_triangle\debug\hello_triangle.tlog\link.write.1.tlog
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7

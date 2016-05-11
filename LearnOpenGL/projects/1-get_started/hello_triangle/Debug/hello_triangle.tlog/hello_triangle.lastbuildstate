@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
 Debug|Win32|D:\work\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_triangle\|
+=======
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+Debug|Win32|D:\hechuzhu\learn_opengl\LearnOpenGL\projects\1-get_started\hello_triangle\|
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7

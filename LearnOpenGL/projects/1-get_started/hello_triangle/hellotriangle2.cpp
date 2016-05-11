@@ -15,7 +15,10 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 const GLuint WIDTH = 800, HEIGHT = 600;
 
 // Shaders
+<<<<<<< HEAD
 // shader code 以string 的方式存储
+=======
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
 const GLchar* vertexShaderSource = "#version 330 core\n"
     "layout (location = 0) in vec3 position;\n"
     "void main()\n"
@@ -61,15 +64,21 @@ int main()
 
     // Build and compile our shader program
     // Vertex shader
+<<<<<<< HEAD
 	// 创建一个vertex shader 对象
     GLint vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	// 将vertex shader source code 绑定到vertex shader 对象上
     glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
 	// 编译vertex shader 对象
+=======
+    GLint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
     glCompileShader(vertexShader);
     // Check for compile time errors
     GLint success;
     GLchar infoLog[512];
+<<<<<<< HEAD
 	// 查看编译结果
     glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
     if (!success)
@@ -86,6 +95,17 @@ int main()
 	// 绑定fragment shader source code 到对象
     glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
 	// 编译fragment shader
+=======
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+    if (!success)
+    {
+        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
+    // Fragment shader
+    GLint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
     glCompileShader(fragmentShader);
     // Check for compile time errors
     glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
@@ -95,6 +115,7 @@ int main()
         std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
     }
     // Link shaders
+<<<<<<< HEAD
 	// 创建shader program，用来link
     GLint shaderProgram = glCreateProgram();
 	// 将编译完成的vertex shader 和 fragment shader 绑定到shader program
@@ -104,12 +125,22 @@ int main()
     glLinkProgram(shaderProgram);
     // Check for linking errors
 	// 查看link 结果
+=======
+    GLint shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+    // Check for linking errors
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
     glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
     if (!success) {
         glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
     }
+<<<<<<< HEAD
 	//  link 完成可以删除shader 对象。
+=======
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
@@ -136,12 +167,16 @@ int main()
         1, 2, 3   // Second Triangle
     };
     GLuint VBO, VAO, EBO;
+<<<<<<< HEAD
 	// 简单来理解Vertex Array object： 就是把Vertex Buffer object 和对应的attribute Pointer 配置信息存成array 中的一个object 对象。
 	// 既然是array， 我们可以存储很多组 vertex buffer object 加 attribute pointer 配置。 每次使用的时候，只需要重新bind 相应的VAO 就行啦。
+=======
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
     // Bind the Vertex Array Object first, then bind and set vertex buffer(s) and attribute pointer(s).
+<<<<<<< HEAD
 	// 这里先绑定VAO，后续VBO， EBO 的信息就会存入VAO
     glBindVertexArray(VAO);
 	// 绑定 VBO，初始化VBO 数据
@@ -156,11 +191,30 @@ int main()
 	// 解绑VBO
     glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed, the call to glVertexAttribPointer registered VBO as the currently bound vertex buffer object so afterwards we can safely unbind
 	// 解绑VAO，remember: do NOT unbind the EBO, keep it bound to this VAO
+=======
+    glBindVertexArray(VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+    glEnableVertexAttribArray(0);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0); // Note that this is allowed, the call to glVertexAttribPointer registered VBO as the currently bound vertex buffer object so afterwards we can safely unbind
+
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
     glBindVertexArray(0); // Unbind VAO (it's always a good thing to unbind any buffer/array to prevent strange bugs), remember: do NOT unbind the EBO, keep it bound to this VAO
 
 
     // Uncommenting this call will result in wireframe polygons.
+<<<<<<< HEAD
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+=======
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
 
     // Game loop
     while (!glfwWindowShouldClose(window))
@@ -175,12 +229,18 @@ int main()
 
         // Draw our first triangle
         glUseProgram(shaderProgram);
+<<<<<<< HEAD
 		// 每次draw 的时候重新绑定VAO
         glBindVertexArray(VAO);
 		// glDrawArrays 简单的理解为DX 的draw，glDrawElements 可以理解为Draw indexed。
         //glDrawArrays(GL_TRIANGLES, 0, 6);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		// Draw 完之后解绑VAO
+=======
+        glBindVertexArray(VAO);
+        //glDrawArrays(GL_TRIANGLES, 0, 6);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+>>>>>>> 59ae59cfca24dd55936f35b8e21c6e7d28ea6ac7
         glBindVertexArray(0);
 
         // Swap the screen buffers
