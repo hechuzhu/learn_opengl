@@ -158,11 +158,17 @@ int main()
 
         // Create transformations
         glm::mat4 transform;
-        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+		// 先平移 (0.5f, -0.5f, 0.0f)； 注意，当前是normalized device coordinate。
+		GLuint time = (GLuint)glfwGetTime();
+		GLuint transFlag = time & 0x3;
+		transform = glm::translate(transform, glm::vec3((GLfloat)transFlag*0.2f, - (GLfloat)transFlag*0.1f, 0.0f));
+		// 利用时间信息rotate，这是角度。最后一个参数是沿着什么方向rotate，这里是z 轴。
         transform = glm::rotate(transform, (GLfloat)glfwGetTime() * 50.0f, glm::vec3(0.0f, 0.0f, 1.0f));
 
         // Get matrix's uniform location and set matrix
+		// 获取shader 中uniform 的变量
         GLint transformLoc = glGetUniformLocation(ourShader.Program, "transform");
+		// 将transform 矩阵复制到uniform 变量上。
         glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
         
         // Draw container
