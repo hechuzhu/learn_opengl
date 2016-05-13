@@ -59,6 +59,7 @@ int main()
 
 
     // Set up vertex data (and buffer(s)) and attribute pointers
+	// 12个三角形组成一个cube
     GLfloat vertices[] = {
         -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
          0.5f, -0.5f, -0.5f,  1.0f, 0.0f,
@@ -103,6 +104,7 @@ int main()
         -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
     };
     // World space positions of our cubes
+	// Cube 在场景中有很多份，这里是每个cube 的中心点坐标。
     glm::vec3 cubePositions[] = {
         glm::vec3( 0.0f,  0.0f,  0.0f),
         glm::vec3( 2.0f,  5.0f, -15.0f),
