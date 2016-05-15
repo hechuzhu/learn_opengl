@@ -1,4 +1,7 @@
 *.log
 *.ilk
 *.tlog
-
+*.suo
+*.exe
+*.obj
+*.pdb
