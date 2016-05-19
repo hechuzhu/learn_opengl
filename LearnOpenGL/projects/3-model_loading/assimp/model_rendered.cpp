@@ -54,6 +54,7 @@ int main()
     glfwMakeContextCurrent(window);
 
     // Set the required callback functions
+	// 回调函数的设定
     glfwSetKeyCallback(window, key_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);

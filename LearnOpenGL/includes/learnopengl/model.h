@@ -31,6 +31,7 @@ public:
 
     /*  Functions   */
     // Constructor, expects a filepath to a 3D model.
+	// 将对象文件*.obj 装载进来，并进行解析。
     Model(string const & path, bool gamma = false) : gammaCorrection(gamma)
     {
         this->loadModel(path);
@@ -46,10 +47,15 @@ public:
 private:
     /*  Functions   */
     // Loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
+	// 这里使用了Assimp 库来Load 对象文件，它支持多种不同类型的对象文件，并且可以解析器格式并变成统一的结构供用户使用。
     void loadModel(string path)
     {
         // Read file via ASSIMP
+		// 使用Assimp 的importer 来load file
         Assimp::Importer importer;
+		// aiProcess_Triangulate: 将所有的面都变成triangle 来处理。
+		// aiProcess_FlipUVs: 
+		// aiProcess_CalcTangentSpace: Calculates the tangents and bitangents for the imported meshes. 
         const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
         // Check for errors
         if(!scene || scene->mFlags == AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) // if is Not Zero
@@ -65,6 +71,7 @@ private:
     }
 
     // Processes a node in a recursive fashion. Processes each individual mesh located at the node and repeats this process on its children nodes (if any).
+	// 递归的方式处理所有的node
     void processNode(aiNode* node, const aiScene* scene)
     {
         // Process each mesh located at the current node

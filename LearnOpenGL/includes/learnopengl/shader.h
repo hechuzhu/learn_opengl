@@ -33,6 +33,7 @@ public:
             fShaderFile.open(fragmentPath);
             std::stringstream vShaderStream, fShaderStream;
             // Read file's buffer contents into streams
+			// 将shader file 中的内容读取到stream 中
             vShaderStream << vShaderFile.rdbuf();
             fShaderStream << fShaderFile.rdbuf();		
             // close file handlers
@@ -55,6 +56,7 @@ public:
         {
             std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
         }
+		// shader code 最终是以字符串的形式存储起来的。
         const GLchar* vShaderCode = vertexCode.c_str();
         const GLchar * fShaderCode = fragmentCode.c_str();
         // 2. Compile shaders
@@ -62,11 +64,16 @@ public:
 //         GLint success;
 //         GLchar infoLog[512];
         // Vertex Shader
+		// 1. 创建vertex shader
         vertex = glCreateShader(GL_VERTEX_SHADER);
+		// 2. 绑定 shader source code 到vertex shader
         glShaderSource(vertex, 1, &vShaderCode, NULL);
+		// 3. 编译vertex shader
         glCompileShader(vertex);
+		// 4. 查看编译错误
         checkCompileErrors(vertex, "VERTEX");
         // Fragment Shader
+		// 对fragment shader 进行相同的步骤
         fragment = glCreateShader(GL_FRAGMENT_SHADER);
         glShaderSource(fragment, 1, &fShaderCode, NULL);
         glCompileShader(fragment);
@@ -82,6 +89,7 @@ public:
 			checkCompileErrors(geometry, "GEOMETRY");
 		}
         // Shader Program
+		// 5. 创建program 对象，并把vertex shader fragment shader 绑定到program 上。
         this->Program = glCreateProgram();
         glAttachShader(this->Program, vertex);
         glAttachShader(this->Program, fragment);
@@ -90,6 +98,7 @@ public:
         glLinkProgram(this->Program);
         checkCompileErrors(this->Program, "PROGRAM");
         // Delete the shaders as they're linked into our program now and no longer necessery
+		// 6. 一旦完成 shader 的link 操作，可以把shader 对象全部delete 掉
         glDeleteShader(vertex);
         glDeleteShader(fragment);
 		if(geometryPath != nullptr)
@@ -97,6 +106,7 @@ public:
 
     }
     // Uses the current shader
+	// 使用绑定shader 的program
     void Use() { glUseProgram(this->Program); }
 
 private:
